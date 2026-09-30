@@ -7,6 +7,33 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+   // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
   <link rel="stylesheet" href="mystyles.css">
 </head>
 <body>
@@ -107,7 +134,29 @@
 </div>
 <div id="members" class="row">
   <div class="col-sm-4 "><h3 class="break-banner big-bold">Accompanist</h3><h2 class="break-banner big-bold">Elizabeth Arkell</h2>
-  <img src="Elizabeth.png"class="img-rounded" alt="Recent photo" width="400" height="400"></div>
+  <img src="Elizabeth.png"class="img-rounded" alt="Recent photo" width="400" height="400">
+  <br><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Bio</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Elizabeth Arkell</h4>
+      </div>
+      <div class="modal-body">
+        <p>Elizabeth was a music scholar at Ardingly College and organ scholar at Sidney Sussex College, Cambridge, where she read for a degree in music. A Fellow of the Royal College of Organists, Elizabeth is an experienced organist and accompanist, having worked with many choirs and choral societies. Her career in music education has seen her teach in schools in Berkshire, Hampshire and Staffordshire, and she is currently Head of Academic Music and School Organist at Oundle School. Elizabeth is a senior examiner for Pearson GCSE Music and has also worked as an examiner for the ABRSM. She was Organist and Director of Music at St John’s Church in Peterborough from 2014 to 2022 and has accompanied ODCS since 2017</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div></div>
   <div class="col-sm-4 small-a"><h3 class="break-banner big-bold">Members</h3>
   <p class="text-section2 text-center"> Chair : Tessa Leuchars</p>
   <p class="text-section2 text-center"> Treasurer: Lynne Pritchard</p>
@@ -115,7 +164,31 @@
   <p class="text-section2 text-center">Publicity and Website: Tessa Leuchars and Claire Weston</p>
   </div>
   <div class="col-sm-4 "><h3 class="break-banner big-bold">Musical Director & conductor</h3><h2 class="break-banner big-bold">Andrew Kennedy</h2>
-  <img src="Andrew.jpg"class="img-rounded" alt="Recent photo" width="350" height="365"></div>
+  <img src="Andrew.jpg"class="img-rounded" alt="Recent photo" width="350" height="365">
+
+<br><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Bio</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Andrew Kennedy</h4>
+      </div>
+      <div class="modal-body">
+        <p>Andrew Kennedy studied at King's College, Cambridge and the Royal College of Music. He was a member of the Young Artists Programme at Covent Garden and a BBC Radio 3 New Generation Artist. He won the Rosenblatt Recital Prize in the 2005 Cardiff Singer of the World Competition and was awarded a Borletti Trust Award and the prestigious Royal Philharmonic Society Young Artists Award in 2006. Highlights in his operatic career have included Tom Rakewell The Rake’s Progress (La Scala, La Monnaie and Opéra de Lyon); Tamino The Magic Flute (English National Opera, Opéra Toulon); Vere Billy Budd and Peter Quint The Turn of the Screw (Houston Grand Opera) and Tito La Clemenzo di Tito (Opéra de Lyon, Oper Frankfurt). In concert Andrew has appeared with the LSO, LPO, Philharmonia RLPO, all major BBC Orchestras and also with the Concertgebouw, Zurich Tonhalle, St Louis Symphony Orchestra, Bamberg Symphoniker, the Monteverdi Choir and Orchestre Révolutionnaire et Romantique and the Helsinki Philharmonic, with conductors including Sir Roger Norrington, Sir Mark Elder, Esa Pekka Solonen, Gianandrea Noseda, David Robertson, Daniele Gatti, Thierry Fisher, Vladimir Jurowski, Sir Neville Marriner and Sir John Eliot Gardiner. He also appeared as a soloist alongside Anna Netrebko in the 2007 BBC Last Night of the Proms. A former Head of Singing at Westminster School and Director of Music at Uppingham School. Andrew is currently Head of Singing at Oundle School and Musician in Residence at Girton College, Cambridge and has been MD of ODCS since September 2025</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
 
  <div class="container text-section pads">
     <div class="clearfix"></div>
@@ -144,10 +217,10 @@
 <p class="big bold whitecolor size-change">Spring 2022 – Requiem, Mozart</p>
 <p class="big bold whitecolor size-change">December 2021 – A French choral Christmas concert, Charpentier and Saint-Saëns</p>
 <p class="big bold whitecolor size-change">Summer 2021 – The Messiah, Handel</p>
-<p class="big bold whitecolor size-change">Spring 2021 – Requiem, Mozart</p> 
+<p class="big bold whitecolor size-change">Spring 2021 – Requiem, Mozart</p>
+
 
 <img src="ocs.png" class="final" alt="Choir peforming">
 <h2 id="contact" class="big-bold whitecolor">contact us at Phone 07709270494</h2>
-
 </body>
 </html>
